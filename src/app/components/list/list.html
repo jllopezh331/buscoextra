@@ -1,0 +1,37 @@
+<div class="listComponent" >
+
+	<searcher (changeSearch)="newSearch($event)" ></searcher>
+
+	<mat-grid-list cols="3" rowHeight="4:2" *ngIf="searchList">
+
+		<mat-grid-tile *ngFor="let image of searchList" >
+			
+			<div routerLink="/detail/{{image.id}}" class="image" [ngStyle]="{
+			backgroundImage: 'url(./' + image.imageUrl + ')',
+			backgroundSize: 'cover',
+	    	backgroundPosition: 'center',
+	    	backgroundRepeat: 'no-repeat'
+			}" >
+
+				<div class="imageInfo" >
+					<div class="text" >
+						<h1 class="truncate" >{{image.title}}</h1>
+						<p class="truncate" >{{image.brief}}</p>
+					</div>
+					<div class="info" >
+						<div class="valoration" >
+							<mat-icon>favorite</mat-icon><span>{{image.likes}}</span>
+						</div>
+						<div class="valoration" >
+							<mat-icon>bookmark</mat-icon><span>{{image.references}}</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</mat-grid-tile>
+
+	</mat-grid-list>
+	
+</div>

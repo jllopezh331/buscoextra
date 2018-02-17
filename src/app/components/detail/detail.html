@@ -1,0 +1,40 @@
+<div class="detailComponent" >
+
+	<mat-toolbar class="header" >
+		<mat-icon routerLink="/" >keyboard_arrow_left</mat-icon>
+	</mat-toolbar>
+	
+	<div class="image" *ngIf="actualImage" >
+		<img *ngIf="actualImage && !noImage" [src]="actualImage.imageUrl" (error)="noImage=true;" >
+		<div class="imageInfo" >
+			<div class="imageTitle" >
+				<p class="truncate" >
+					<span class="title" >{{actualImage.title}}</span> - {{actualImage.description}}
+				</p>
+			</div>
+			<div class="valorations" >
+				<p>
+					<mat-icon>favorite</mat-icon>{{actualImage.likes}}
+					<mat-icon>bookmark</mat-icon>{{actualImage.references}}
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="user" *ngIf="actualImage" >
+		<div class="userAvatar" >
+			<div class="avatar" [ngStyle]="{
+			backgroundImage: 'url(' + actualImage.owner.thumbUrl + ')',
+			backgroundSize: 'cover',
+	    	backgroundPosition: 'center',
+	    	backgroundRepeat: 'no-repeat'
+			}" ></div>
+		</div>
+		<div class="userInfo" >
+			<p class="name" >{{actualImage.owner.userName}}</p>
+			<p class="title" >{{actualImage.title}}</p>
+			<p class="description" >{{actualImage.description}}</p>
+		</div>
+	</div>
+	
+</div>

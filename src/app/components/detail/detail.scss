@@ -1,0 +1,75 @@
+.detailComponent {
+	.header {
+		background: #333333;
+		mat-icon {
+			color: #fff;
+			cursor: pointer;
+			&:focus {
+		    	outline: none;
+		    }
+		}
+	}
+	.image {
+		background: #1b1b1b;
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 400px;
+		}
+		.imageInfo {
+			display: flex;
+			flex-direction: row;
+			padding: 1rem 0;
+			.imageTitle {
+				width: 80%;
+				padding: 0 .5rem;
+				color: #fff;
+				.title {
+					color: #ffcc00;
+					font-weight: bold;
+				}
+				.truncate {
+					display: block;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+			    }
+			}
+			.valorations {
+				display: flex;
+				justify-content: center;
+				width: 20%;
+				color: #fff;
+			}
+		}
+	}
+	.user {
+		display: flex;
+		flex-direction: row;
+		padding: 2rem 0;
+		width: 70%;
+		margin: 0 auto;
+		.userAvatar {
+			width: 30%;
+			.avatar {
+				width: 60px;
+				height: 60px;
+				background: #ddd;
+				border-radius: 50%;
+				margin: 0 auto;
+				margin: 1rem auto 0;
+			}
+		}
+		.userInfo {
+			width: 70%;
+			.name {
+				color: #0593ff;
+				font-size: 1.3rem;
+    			font-weight: 600;
+			}
+			.description {
+				font-size: .8rem;
+			}
+		}
+	}
+}

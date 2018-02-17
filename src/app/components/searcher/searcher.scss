@@ -1,0 +1,15 @@
+.searcher {
+	background: #333333;
+	input {
+		width: 60%;
+	    margin: 0 auto;
+	    height: 30px;
+	    border-radius: 10px;
+	    border: none;
+	    font-size: 1rem;
+	    padding: 0 1rem;
+	    &:focus {
+	    	outline: none;
+	    }
+	}
+}
